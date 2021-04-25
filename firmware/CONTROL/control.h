@@ -1,0 +1,28 @@
+//////////////////////////////////////////////////////////////////////////////////
+//2019年中国民航大学电子设计竞赛E题
+//////////////////////////////////////////////////////////////////////////////////
+//队名：电子竞技
+//成员：丁  涛  何冠祥  徐天泽
+//////////////////////////////////////////////////////////////////////////////////
+//本程序仅供学习使用，未经作者许可，不得用于其它任何用途
+//////////////////////////////////////////////////////////////////////////////////
+#ifndef __CONTROL_H
+#define __CONTROL_H
+
+#include "main.h"
+
+int  __abs(int number);
+int  Velocity_PI_L(int Now,int Target);
+int  Velocity_PI_R(int Now,int Target);
+int  Angle_PID_Yaw(float Now,float Target,FlagStatus* Arrive_Flag);
+int  Angle_PID_CCD(int Now,int Target,FlagStatus* Arrive_Flag);
+void EXTI15_10_IRQHandler(void);
+void Branch_Out_Yaw(void);
+void Set_PWM(int motor_l,int motor_r);
+void Amplitude_Limiting(int* Variable,int Range);
+void Yaw_Reset(void);
+void Delay_n5ms(u16 n5ms);
+void Delay_sec(u8 sec);
+
+#endif
+//////////////////////////////////////////////////////////////////////////////////

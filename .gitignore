@@ -1,0 +1,6 @@
+firmware/USER/DebugConfig
+firmware/OBJ
+firmware/.vscode
+*.uvguix.*
+*.uvoptx
+JLinkSettings.ini
